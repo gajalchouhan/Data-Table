@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <h1 style="text-align:center; text-decoration: underline;">
+            Data-Table
+       </h1>
+    </div>
+
+    <div class="searchBox">  
+        <div>
+           <input placeholder="Search..." onkeyup="searchByName(event)"/>
+        </div>
+    </div>
+
+    <table id="myTable">
+        <thead>
+              <th>Name</th>
+              <th onclick="tableSort(0)">Native Name </th>
+              <th onclick="tableSort(1)">Alpha 2 code </th>
+              <th onclick="tableSort(2)">Alpha 3 code</th>
+              <th onclick="tableSort(3)">Capital</th>
+        </thead>
+        <tbody id="baseData"></tbody>
+    </table>
+
+
+    <div class="pagination">
+        <div>
+        <i  onclick="previous()" class="fa fa-2x fa-angle-left"></i>
+        </div>
+        <div id="pages">
+            
+        </div>
+        <div>
+            <i onclick="next()" class="fa  fa-2x fa-angle-right"></i>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,148 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+  }
+  
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .searchBox{
+    display: flex;
+    margin :0rem 1rem;
+  }
+
+  .searchBox > div {
+    margin : 1rem;
+    padding :0rem 1rem;
+  }
+
+  .searchBox > div > input {
+    padding : 0.5rem;
+    font-size : 1em;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px lightblue;
+  }
+
+  th{
+    cursor: pointer;
+  }
+
+  .pagination{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    background: white;
+  }
+
+  .pagination > div > button {
+    padding: 0.5rem 1rem;
+    margin: 0rem 1rem;
+    font-size: 1rem;
+    border: 1px solid lightgray;
+    background: white;
+    box-shadow: 0px 0px 1px 1px lightgrey;
+    border-radius: 14px;
+  }
+
+  .name{
+    color : #244093 !important;
+  }
+
+  .fa{
+    cursor: pointer;
+  }
+
+  #pages{
+    display: flex;
+  }
+
+  .pageIndex{
+    padding: 10px 20px;
+    border: 1px solid #244093;
+    margin: 0 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
